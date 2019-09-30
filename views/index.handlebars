@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="/">
-    <img src="./public/assets/images/Logo-OC-Weekly-Scraper.png" width="30" height="30" alt="OC Weekly Scraper">
+        <img src="./assets/images/Logo-OC-Weekly-Scraper.png" height="70" alt="OC Weekly Scraper">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +17,7 @@
     </div>
 </nav>
 <div class="container-fluid">
-    <div class="jumbotron text-center background-image">
+    <div class="jumbotron text-center jumbotron-style">
         <div class="overlay">
             <div class="caption">
                 <h1 class="display-1 text-white">Mongo Scraper</h1>
@@ -27,12 +27,12 @@
     </div>
     <div class="row">
         {{#each articles}}
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="card">
                 <img src"..." class="card-img-top" alt="...">
                 <div class="card-body">
-                    <a href="{{this.url}}">
-                        <h3 class="card-title">{{this.title}}</h3>
+                    <a href="{{this.link}}" target="_blank">
+                        <h5 class="card-title">{{this.title}}</h5>
                     </a>
                     <p class="card-text">{{this.summary}}</p>
                     <button id="{{_id}}" class="btn btn-primary save-btn">Save Article</button>
